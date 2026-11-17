@@ -13,14 +13,14 @@ def build_map(df: pd.DataFrame) -> folium.Map:
     last_quake = folium.Map(location=[20, 0], zoom_start=2)
 
     for row in df.itertuples(index=False):
-        magnitud_color = color_for(row.magnitud)
+        magnitude_color = color_for(row.magnitude)
         folium.CircleMarker(
             location=(row.lat, row.lon),
-            tooltip=f"Magnitud {row.magnitud} - {row.location}",
-            radius=max(row.magnitud, 0.5) * 3,
-            color=magnitud_color,
+            tooltip=f"Magnitude {row.magnitude} - {row.location}",
+            radius=max(row.magnitude, 0.5) * 3,
+            color=magnitude_color,
             fill=True,
-            fill_color=magnitud_color,
+            fill_color=magnitude_color,
             fill_opacity=0.6,
         ).add_to(last_quake)
 

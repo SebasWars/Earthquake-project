@@ -1,7 +1,7 @@
-from filters import filter_quakes
-from data_frame import load_quake
+from src.quakes.filters import filter_quakes
+from src.quakes.loader import load_quake
 
-from status import strongest_quake, average_depth, quakes_per_day, dayly_sumary
+from src.quakes.stats import strongest_quake, average_depth, quakes_per_day, dayly_sumary
 
 quakes = load_quake()
 

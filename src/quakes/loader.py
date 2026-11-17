@@ -4,9 +4,8 @@ import json
 
 PATH = Path("data/data.json")
 
-
 def load_quake(path: Path = PATH) -> pd.DataFrame:
-    with open(PATH, "r", encoding="utf-8") as file:
+    with open(path, "r", encoding="utf-8") as file:
         data = json.load(file)
 
     raw = pd.json_normalize(data["features"])
@@ -18,7 +17,7 @@ def load_quake(path: Path = PATH) -> pd.DataFrame:
         {
             "location": raw["properties.place"],
             "time": pd.to_datetime(raw["properties.time"], unit="ms"),
-            "magnitud": raw["properties.mag"],
+            "magnitude": raw["properties.mag"],
         }
     )
 

@@ -15,7 +15,7 @@ def quakes_per_day(df: pd.DataFrame):
 
 def dayly_sumary(df: pd.DataFrame):
     return df.groupby(df["time"].dt.date).agg(
-        count=("magnitud", "size"),
-        max_mag=("magnitud", "max"),
-        average_mag=("magnitud", "mean"),
+        count=("magnitude", "size"),
+        max_mag=("magnitude", "max"),
+        average_mag=("magnitude", "mean"),
     )

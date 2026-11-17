@@ -2,7 +2,7 @@ import pandas as pd
 
 
 def by_magnitud(df: pd.DataFrame, min_mag: float) -> pd.DataFrame:
-    return df[df["magnitud"] >= min_mag]
+    return df[df["magnitude"] >= min_mag]
 
 
 def by_date_range(df: pd.DataFrame, start, end) -> pd.DataFrame:
