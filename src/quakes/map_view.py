@@ -17,7 +17,7 @@ def build_map(df: pd.DataFrame) -> folium.Map:
         magnitude_color = color_for(row.magnitude)
         folium.CircleMarker(
             location=(row.lat, row.lon),
-            ttooltip=f"M{row.magnitude} · {row.depth} km · {row.time:%d %b %H:%M}",
+            tooltip=f"M{row.magnitude} · {row.depth} km · {row.time:%d %b %H:%M}",
             popup=folium.Popup(
                 f"<b>{row.location}</b><br>"
                 f"Magnitude: {row.magnitude}<br>"
