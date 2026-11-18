@@ -1,10 +1,9 @@
+from .config import DATA_PATH
 from pathlib import Path
 import pandas as pd
 import json
 
-PATH = Path("data/data.json")
-
-def load_quake(path: Path = PATH) -> pd.DataFrame:
+def load_quake(path: Path = DATA_PATH) -> pd.DataFrame:
     with open(path, "r", encoding="utf-8") as file:
         data = json.load(file)
 
@@ -22,6 +21,6 @@ def load_quake(path: Path = PATH) -> pd.DataFrame:
     )
 
     quakes = pd.concat([quakes, coor], axis=1)
-    quakes = quakes.dropna(subset=["magnitud"])
+    quakes = quakes.dropna(subset=["magnitude"])
 
     return quakes
