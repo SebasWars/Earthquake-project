@@ -82,6 +82,7 @@ with map_col:
     st_folium(
         build_map(filtered),
         height=400,
+        use_container_width=True
     )
     st.caption(
         "🟢 Magnitude < 3   ·   🟠 Between 3 and 5   ·   🔴 5 or more   ·   Circle size depends on magnitude"
