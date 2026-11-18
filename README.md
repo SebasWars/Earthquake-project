@@ -2,7 +2,7 @@
 
 Interactive dashboard of the last week's earthquakes, built with Python, pandas, Folium and Streamlit.
 
-**Live demo:** <enlace de Streamlit>
+**Live demo:**  https://earthquake-project-9pkyixdbahzvattx4hw436.streamlit.app
 
 ![Dashboard screenshot](docs/Earhquake_dashboar.png)
 
