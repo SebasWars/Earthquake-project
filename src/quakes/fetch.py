@@ -8,7 +8,7 @@ URL = "https://earthquake.usgs.gov/fdsnws/event/1/query"
 
 def fetch_data(days: int = 7) -> None:
     end = date.today() - timedelta(days=days)
-    start = end - timedelta(days=days)
+    start = date.today() - timedelta(days=1)
     params = {
         "format": "geojson",
         "starttime": start.isoformat(),
